@@ -1,6 +1,6 @@
 ---
 - name: "add postgres repository"
-  apt_repository: repo="deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main"
+  apt_repository: repo="deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main"
 
 
 - name: "add postgres repository key"
@@ -10,10 +10,10 @@
 - name: "install postgres & libpq-dev"
   apt: name="{{ item }}" update_cache=yes state=present
   with_items:
-    - postgresql-9.4
+    - postgresql-9.5
     - libpq-dev
-
-
+    
+    
 - name: install psycopg2 python module
   pip: name=psycopg2
 
