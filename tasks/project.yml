@@ -42,7 +42,7 @@
 
 
 - name: check if custom template for prod.secret.exs exists
-  local_action: stat path="templates/prod.secret.exs.j2"
+  local_action: stat path="{{ project_path }}/playbooks/templates/prod.secret.exs.j2"
   register: custom_prod_secret_template
 
 
