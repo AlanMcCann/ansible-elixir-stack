@@ -55,7 +55,7 @@
 
 
 # - when: custom_prod_secret_template.stat.exists == True
--  name: add prod.secret.exs from custom template provided
+- name: add prod.secret.exs from custom template provided
   template:
     src: "{{ project_path }}/playbooks/templates/prod.secret.exs.j2"
     dest: "{{ project_path }}/config/prod.secret.exs"
